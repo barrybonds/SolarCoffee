@@ -25,7 +25,7 @@
             <td>
                 {{item.product.name}}
             </td>
-             <td>
+             <td v-bind:class="`${applyColor(item.quantityOnHand, item.idealQuantity)}`">
                 {{item.quantityOnHand}}
             </td>
              <td>
@@ -40,8 +40,7 @@
                 </span>
             </td>
             <td>
-            <div>
-               X
+            <div class="lni-cross-circle product-archive" @click="archiveProduct(item.product.id)">
             </div>
           </td>
 
@@ -70,9 +69,10 @@ import NewProductModal from '../components/modals/NewProductModal.vue';
 import ShipmentModal from '../components/modals/ShipmentModal.vue';
 import { IShipment } from '@/types/Shipment';
 import { InventoryService } from "@/services/inventory-service";
+import {ProductService} from "@/services/product-service";
 
 const inventoryService = new InventoryService();
-
+const productService = new ProductService();
 
 @Component({
   name: 'Inventory',
@@ -113,37 +113,70 @@ export default class Inventory extends Vue {
     ];
     isShipmentVisible:boolean = false;
     isNewProductVisible:boolean = false;
+    async archiveProduct(productId: number){
+        await productService.archive(productId);
+        await this.Initialize();
+    }
+    async saveNewProduct(newProduct: IProduct){
+        await productService.save(newProduct);
+        this.isNewProductVisible = false;
+        await this.Initialize();
+    }
+    applyColor(current:number, target:number){
+      if(current <= 0){
+          return "red";
+      }if(Math.abs(target - current) > 8){
+          return "yellow";
+      }
+      return "green";
+    }
     closeModals(){
         this.isShipmentVisible = false;
         this.isNewProductVisible = false;
     }
-
     showNewProductModal(){
     this.isNewProductVisible = true;
     }
-
     showShipmentModal(){
     this.isShipmentVisible = true;
     }
-
-    saveNewProduct(product : IProduct){
-     console.log('saveNewProduct:');
-     console.log(product);
-    }
-    saveNewShipment(shipment: IShipment){
-     console.log('saveNewShipment:');
-     console.log(shipment);
+    async saveNewShipment(shipment: IShipment){
+     await inventoryService.updateInventoryQuantity(shipment);
+     this.isShipmentVisible = false;
+     await this.Initialize();
     }
     async Initialize(){
         await inventoryService.getInventory();
     }
-
     async created(){
         await this.Initialize();
     }
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@import "@/scss/global.scss";
+.green{
+    font-weight:bold;
+    color:$solar-green;
+}
+.yellow{
+    font-weight: bold;
+    color: $solar-yellow;
+}
+.red{
+    font-weight: bold;
+    color: $solar-red;
+}
+.inventory-actions {
+    display: flex;
+    margin-bottom: 0.8rem;
+}
 
+.product-archive{
+    cursor:pointer;
+    font-weight:bold;
+    font-size:1.2rem;
+    color:$solar-red;
+}
 </style>

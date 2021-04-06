@@ -17,6 +17,7 @@ using SolarCoffee.Services.Inventory;
 using SolarCoffee.Services.Product;
 using SolarCoffee.Services.Customer;
 using SolarCoffee.Services.Order;
+using Newtonsoft.Json.Serialization;
 
 namespace SolarCoffee.Web
 {
@@ -33,15 +34,18 @@ namespace SolarCoffee.Web
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddControllers();
+            services.AddCors();
+            services.AddControllers().AddNewtonsoftJson(opts => {
+                opts.SerializerSettings.ContractResolver = new DefaultContractResolver
+                {
+                    NamingStrategy = new CamelCaseNamingStrategy()
+                }; 
+            });
             services.AddDbContext<SolarDbContext>(opts => { opts.EnableDetailedErrors(); opts.UseSqlServer(Configuration.GetConnectionString("sqlConnection")); });
             services.AddTransient<IProductService, ProductService>();
             services.AddTransient<ICustomerService, CustomerService>();
             services.AddTransient<IInventoryService, InventoryService>();
             services.AddTransient<IOrderService, OrderService>();
-
-
-
 
             services.AddSwaggerGen(c =>
             {
@@ -64,6 +68,16 @@ namespace SolarCoffee.Web
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors(builder => builder.WithOrigins(
+                "http://localhost:8080",
+                "http://localhost:8081")
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowCredentials()
+                );
+
+
+
 
             app.UseAuthorization();
 
