@@ -5,7 +5,8 @@
   </h1>
   <hr/>
   <div class="customer-action">
-    <solar-button>
+    <solar-button 
+    @button:click="saveNewCustomerModel">
     Add Customer
     </solar-button>
   </div>
@@ -39,8 +40,12 @@
             </div>
           </td>
       </tr>
-
   </table>
+  <new-customer-modal
+    @close="close"
+    @save:customer="saveNewCustomerModel"
+    v-if="isCustomerModalVisible"
+  />
   </div>
 </template>
 <script lang="ts">
@@ -48,20 +53,31 @@ import {Component, Vue} from 'vue-property-decorator';
 import SolarButton from "../components/SolarButton.vue";
 import {ICustomer} from "@/types/Customer";
 import CustomerService  from "../services/customer-service";
-
+import NewCustomerModal from "@/components/modals/NewCustomerModal.vue";
 
 const customerService = new CustomerService();
 
 @Component({
   name: 'Customers',
-  components:{SolarButton}
+  components:{SolarButton, NewCustomerModal}
 })
+
 export default class Customers extends Vue{
 customers: ICustomer[] = [];
 isCustomerModalVisible:boolean = false;
 
 showNewCustomerModal(){
   this.isCustomerModalVisible = true;
+}
+
+closeModal() {
+  this.isCustomerModalVisible = false;
+}
+
+async saveNewCustomer(newCustomer: ICustomer){
+  await customerService.addCustomer(newCustomer);
+  this.isCustomerModalVisible = false;
+  await this.initialize();
 }
 
 async initialize(){
@@ -97,7 +113,4 @@ async created(){
  color:$solar-red;
 
 }
-
-
-
 </style>

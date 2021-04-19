@@ -29,6 +29,15 @@
                  <label for="state">State</label>
                 <input type="text" id="state" v-model="customer.primaryAddress.state">
             </li>
+              <li>
+                 <label for="state">Postal Code</label>
+                <input type="text" id="state" v-model="customer.primaryAddress.postalCode">
+            </li>
+            <li>
+          <label for="country">Country</label>
+          <input type="text" id="country" v-model="customer.primaryAddress.country"
+          />
+        </li>
         <ul>
     </template>
     <template v-slot:footer>
@@ -36,7 +45,7 @@
         type="button"
         @button:click="save"
         arial-label="save new customer">
-        Save 
+        Save Customer
         </solar-button>
 
           <solar-button
@@ -57,31 +66,37 @@ import SolarButton from "../../components/SolarButton.vue";
 import SolarModal from "../../components/modals/SolarModal.vue";
 import {ICustomer} from "@/types/Customer";
 
-@Component({name: "NewCustomerModal", components: {SolarButton, SolarModal}})
-
+@Component({name: "NewCustomerModal",
+ components: {SolarButton, SolarModal}
+ })
 export default class NewCustomerModal  extends Vue {
-customer :ICustomer = {};
-
+customer :ICustomer = {
+  primaryAddress:{
+      
+  },
+  createdOn: new Date(),
+  updatedOn: new Date(),
+  firstName: "",
+  lastName:""
+};
 save(){
     this.$emit('save-customer', this.customer);
 }
-
 close(){
     this.$emit('close');
+  }
 }
-
-}
-
 </script>
+
 <style scoped lang="scss">
-.newCustomer{
+.newCustomer {
     display: flex;
     flex-wrap: 1.8rem;
     list-style: none;
     padding: 0;
     margin:0;
 
-    input{
+    input {
         width: 80%;
         height: 1.8rem;
         margin:0.8rem;
@@ -90,11 +105,10 @@ close(){
         line-height: 1.3rem;
         color:#555;
     }
-    label{
+    label {
         font-weight: bold;
         margin:0.8rem;
         display: block;
     }
 }
-
 </style>
