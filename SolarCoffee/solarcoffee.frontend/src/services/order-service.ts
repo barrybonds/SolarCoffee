@@ -12,7 +12,7 @@ export class OrderService{
     }
 
     public async markOrderComplete(id:number): Promise<any>{
-        let result: any = await.patch(`${this.API_URL}/order/complete/${id}`);
+        let result: any = await axios.patch(`${this.API_URL}/order/complete/${id}`);
         return result.data;
     }
 }

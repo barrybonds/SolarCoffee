@@ -218,7 +218,7 @@
     }
 
     get runningTotal(){
-      return this.lineItems.reduce((a, b) => a + (b['product']['price'] * b['quantity']),0)
+      return this.lineItems.reduce((a, b) => a + b['product']['price'] * b['quantity'],0)
     }
 
     async submitInvoice(): Promise<void> {
@@ -239,7 +239,7 @@
 
       html2canvas(invoice).then(canvas => {
         let image = canvas.toDataURL("image/png");
-        pdf.addImage(image,"PNG", 0,0, width* 0.55, height * 0.55);
+        pdf.addImage(image,"PNG", 0, 0, width * 0.55, height * 0.55);
         pdf.save("invoice");
       });
     }
@@ -262,14 +262,14 @@
     this.invoiceStep += 1;
   }
 
-    async initialize(): Promise<void> {
-        this.customers = await customerService.getCustomers();
-        this.inventory = await inventoryService.getInventory();
-    }
-    async created() {
-      await this.initialize();
-    }
+  async initialize(): Promise<void> {
+      this.customers = await customerService.getCustomers();
+      this.inventory = await inventoryService.getInventory();
   }
+  async created() {
+    await this.initialize();
+  }
+}
 </script>
 
 <style scoped lang="scss">
