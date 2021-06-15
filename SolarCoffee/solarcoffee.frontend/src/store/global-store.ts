@@ -19,19 +19,18 @@ const actions = {
      async assignSnapshots({ commit }){
        const inventoryService = new InventoryService();
        let res = await inventoryService.getSnapshotHistory();
-
+       console.log(':: assignSnapshots ::', res)
        let timeline: IInventoryTimeline =  {
            productInventorySnapshots: res.productInventorySnapshots,
            timeline: res.timeline
        };
+       console.log(':: assignSnapshots ::', timeline)
 
        commit('SET_SNAPSHOT_TIMELINE', timeline);
        commit('SET_IS_TIMELINE_BUILT', true);
      },
 };
-
 const getters = {};
-
 export default {
   state,
   mutations,

@@ -4,14 +4,14 @@
     "C:\\PlaySpace\\SolarCoffee\\SolarCoffee.Test\\SolarCoffee.Test.csproj": {}
   },
   "projects": {
-    "C:\\PlaySpace\\SolarCoffee\\SolarCoffee.Test\\SolarCoffee.Test.csproj": {
+    "C:\\PlaySpace\\SolarCoffee\\SolarCoffee.Data\\SolarCoffee.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\PlaySpace\\SolarCoffee\\SolarCoffee.Test\\SolarCoffee.Test.csproj",
-        "projectName": "SolarCoffee.Test",
-        "projectPath": "C:\\PlaySpace\\SolarCoffee\\SolarCoffee.Test\\SolarCoffee.Test.csproj",
+        "projectUniqueName": "C:\\PlaySpace\\SolarCoffee\\SolarCoffee.Data\\SolarCoffee.Data.csproj",
+        "projectName": "SolarCoffee.Data",
+        "projectPath": "C:\\PlaySpace\\SolarCoffee\\SolarCoffee.Data\\SolarCoffee.Data.csproj",
         "packagesPath": "C:\\Users\\victor.obaitor\\.nuget\\packages\\",
-        "outputPath": "C:\\PlaySpace\\SolarCoffee\\SolarCoffee.Test\\obj\\",
+        "outputPath": "C:\\PlaySpace\\SolarCoffee\\SolarCoffee.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\victor.obaitor\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,153 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\PlaySpace\\SolarCoffee\\SolarCoffee.Services\\SolarCoffee.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\PlaySpace\\SolarCoffee\\SolarCoffee.Services\\SolarCoffee.Services.csproj",
+        "projectName": "SolarCoffee.Services",
+        "projectPath": "C:\\PlaySpace\\SolarCoffee\\SolarCoffee.Services\\SolarCoffee.Services.csproj",
+        "packagesPath": "C:\\Users\\victor.obaitor\\.nuget\\packages\\",
+        "outputPath": "C:\\PlaySpace\\SolarCoffee\\SolarCoffee.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\victor.obaitor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\PlaySpace\\SolarCoffee\\SolarCoffee.Data\\SolarCoffee.Data.csproj": {
+                "projectPath": "C:\\PlaySpace\\SolarCoffee\\SolarCoffee.Data\\SolarCoffee.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\PlaySpace\\SolarCoffee\\SolarCoffee.Test\\SolarCoffee.Test.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\PlaySpace\\SolarCoffee\\SolarCoffee.Test\\SolarCoffee.Test.csproj",
+        "projectName": "SolarCoffee.Test",
+        "projectPath": "C:\\PlaySpace\\SolarCoffee\\SolarCoffee.Test\\SolarCoffee.Test.csproj",
+        "packagesPath": "C:\\Users\\victor.obaitor\\.nuget\\packages\\",
+        "outputPath": "C:\\PlaySpace\\SolarCoffee\\SolarCoffee.Test\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\victor.obaitor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\PlaySpace\\SolarCoffee\\SolarCoffee.Data\\SolarCoffee.Data.csproj": {
+                "projectPath": "C:\\PlaySpace\\SolarCoffee\\SolarCoffee.Data\\SolarCoffee.Data.csproj"
+              },
+              "C:\\PlaySpace\\SolarCoffee\\SolarCoffee.Services\\SolarCoffee.Services.csproj": {
+                "projectPath": "C:\\PlaySpace\\SolarCoffee\\SolarCoffee.Services\\SolarCoffee.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.7.1, )"

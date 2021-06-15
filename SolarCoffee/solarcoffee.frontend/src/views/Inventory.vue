@@ -4,6 +4,9 @@
             Inventory Dashboard
         </h1>
         <hr/>
+
+        <inventory-chart/>
+
          <div class="inventory-actions">
              <solar-button @click.native="showNewProductModal" id="addNewBtn">
                  Add New Item
@@ -147,6 +150,7 @@ export default class Inventory extends Vue {
     }
     async Initialize(){
         await inventoryService.getInventory();
+        await this.$store.dispatch("assignSnapshots");
     }
     async created(){
         await this.Initialize();
