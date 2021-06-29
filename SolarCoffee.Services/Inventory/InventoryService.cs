@@ -100,7 +100,7 @@ namespace SolarCoffee.Services.Inventory
 
                 try
                 {
-                    CreateSnapshot(inventory);
+                    CreateSnapshot();
                 }
                 catch (Exception e)
                 {
@@ -129,5 +129,21 @@ namespace SolarCoffee.Services.Inventory
                 };
             }
         }
+
+        //private void CreateSnapshot()
+        //{
+        //    var now = DateTime.UtcNow;
+        //    var inventories = _db.ProductInventories.Include(inv => inv.Product).ToList();
+        //    foreach (var inventory in inventories) {
+        //        var snapshot = new ProductInventorySnapshot
+        //        {
+        //            SnapshotTime = now,
+        //            Product = inventory.Product,
+        //            QunatityOnHand = inventory.QuantityOnHand
+
+        //        };
+        //        _db.Add(snapshot);
+        //    }
+        //}
     }
 }

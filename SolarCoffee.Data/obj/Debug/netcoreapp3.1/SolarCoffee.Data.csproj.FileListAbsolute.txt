@@ -3,10 +3,10 @@ C:\PlaySpace\SolarCoffee\SolarCoffee.Data\bin\Debug\netcoreapp3.1\SolarCoffee.Da
 C:\PlaySpace\SolarCoffee\SolarCoffee.Data\bin\Debug\netcoreapp3.1\SolarCoffee.Data.runtimeconfig.dev.json
 C:\PlaySpace\SolarCoffee\SolarCoffee.Data\bin\Debug\netcoreapp3.1\SolarCoffee.Data.dll
 C:\PlaySpace\SolarCoffee\SolarCoffee.Data\bin\Debug\netcoreapp3.1\SolarCoffee.Data.pdb
-C:\PlaySpace\SolarCoffee\SolarCoffee.Data\obj\Debug\netcoreapp3.1\SolarCoffee.Data.csprojAssemblyReference.cache
 C:\PlaySpace\SolarCoffee\SolarCoffee.Data\obj\Debug\netcoreapp3.1\SolarCoffee.Data.AssemblyInfoInputs.cache
 C:\PlaySpace\SolarCoffee\SolarCoffee.Data\obj\Debug\netcoreapp3.1\SolarCoffee.Data.AssemblyInfo.cs
 C:\PlaySpace\SolarCoffee\SolarCoffee.Data\obj\Debug\netcoreapp3.1\SolarCoffee.Data.csproj.CoreCompileInputs.cache
 C:\PlaySpace\SolarCoffee\SolarCoffee.Data\obj\Debug\netcoreapp3.1\SolarCoffee.Data.dll
 C:\PlaySpace\SolarCoffee\SolarCoffee.Data\obj\Debug\netcoreapp3.1\SolarCoffee.Data.pdb
 C:\PlaySpace\SolarCoffee\SolarCoffee.Data\obj\Debug\netcoreapp3.1\SolarCoffee.Data.genruntimeconfig.cache
+C:\PlaySpace\SolarCoffee\SolarCoffee.Data\obj\Debug\netcoreapp3.1\SolarCoffee.Data.csproj.AssemblyReference.cache

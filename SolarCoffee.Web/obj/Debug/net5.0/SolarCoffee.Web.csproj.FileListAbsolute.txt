@@ -55,12 +55,10 @@ C:\PlaySpace\SolarCoffee\SolarCoffee.Web\bin\Debug\net5.0\SolarCoffee.Data.dll
 C:\PlaySpace\SolarCoffee\SolarCoffee.Web\bin\Debug\net5.0\SolarCoffee.Services.dll
 C:\PlaySpace\SolarCoffee\SolarCoffee.Web\bin\Debug\net5.0\SolarCoffee.Data.pdb
 C:\PlaySpace\SolarCoffee\SolarCoffee.Web\bin\Debug\net5.0\SolarCoffee.Services.pdb
-C:\PlaySpace\SolarCoffee\SolarCoffee.Web\obj\Debug\net5.0\SolarCoffee.Web.csprojAssemblyReference.cache
 C:\PlaySpace\SolarCoffee\SolarCoffee.Web\obj\Debug\net5.0\SolarCoffee.Web.GeneratedMSBuildEditorConfig.editorconfig
 C:\PlaySpace\SolarCoffee\SolarCoffee.Web\obj\Debug\net5.0\SolarCoffee.Web.AssemblyInfoInputs.cache
 C:\PlaySpace\SolarCoffee\SolarCoffee.Web\obj\Debug\net5.0\SolarCoffee.Web.AssemblyInfo.cs
 C:\PlaySpace\SolarCoffee\SolarCoffee.Web\obj\Debug\net5.0\SolarCoffee.Web.csproj.CoreCompileInputs.cache
-C:\PlaySpace\SolarCoffee\SolarCoffee.Web\obj\Debug\net5.0\SolarCoffee.Web.MvcApplicationPartsAssemblyInfo.cs
 C:\PlaySpace\SolarCoffee\SolarCoffee.Web\obj\Debug\net5.0\SolarCoffee.Web.MvcApplicationPartsAssemblyInfo.cache
 C:\PlaySpace\SolarCoffee\SolarCoffee.Web\obj\Debug\net5.0\staticwebassets\SolarCoffee.Web.StaticWebAssets.Manifest.cache
 C:\PlaySpace\SolarCoffee\SolarCoffee.Web\obj\Debug\net5.0\staticwebassets\SolarCoffee.Web.StaticWebAssets.xml
@@ -71,3 +69,4 @@ C:\PlaySpace\SolarCoffee\SolarCoffee.Web\obj\Debug\net5.0\SolarCoffee.Web.dll
 C:\PlaySpace\SolarCoffee\SolarCoffee.Web\obj\Debug\net5.0\ref\SolarCoffee.Web.dll
 C:\PlaySpace\SolarCoffee\SolarCoffee.Web\obj\Debug\net5.0\SolarCoffee.Web.pdb
 C:\PlaySpace\SolarCoffee\SolarCoffee.Web\obj\Debug\net5.0\SolarCoffee.Web.genruntimeconfig.cache
+C:\PlaySpace\SolarCoffee\SolarCoffee.Web\obj\Debug\net5.0\SolarCoffee.Web.csproj.AssemblyReference.cache
