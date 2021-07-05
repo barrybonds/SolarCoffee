@@ -46,7 +46,6 @@ namespace SolarCoffee.Web
             services.AddTransient<ICustomerService, CustomerService>();
             services.AddTransient<IInventoryService, InventoryService>();
             services.AddTransient<IOrderService, OrderService>();
-
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "SolarCoffee.Web", Version = "v1" });

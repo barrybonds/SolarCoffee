@@ -93,5 +93,8 @@ namespace SolarCoffee.Test
             customer[1].Id.Should().Be(-89);
             customer[2].Id.Should().Be(123);
         }
+
+
+
     }
 }
